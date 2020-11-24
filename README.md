@@ -1,2 +1,2 @@
 # Swing2020
-##  打工人戳→：https://github.com/gxkjsfxy/swing
+##  打工人戳→：github.com/gxkjsfxy/swing
