@@ -5,29 +5,30 @@
 
 ```
 import javax.swing.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 public class App {
-   JPanel myPanel=new JPanel();
-   JLabel label_txt=new JLabel();
-   //构造方法
-   public App() {
+    JPanel myPanel=new JPanel();
+    JLabel label_txt=new JLabel();
+    //构造方法
+    public App() {
 
-   }
-   //显示窗体方法
-   void go(){
-       JFrame frame = new JFrame("TestGUI");
-       myPanel.setLayout(null);
-       myPanel.add(label_txt);
-       frame.setContentPane(myPanel);
-       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       frame.setBounds(100,100,512,720);
-       //frame.pack();
-       frame.setVisible(true);
-   }
-   public static void main(String[] args) {
-       new App().go();
-   }
+    }
+    //显示窗体方法
+    void go(){
+        label_txt.setText("这是一个Label标签。");
+        label_txt.setBounds(0,0,200,30);
+        myPanel.add(label_txt);
+
+        myPanel.setLayout(null);
+        JFrame frame = new JFrame("一个小程序");
+        frame.setContentPane(myPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setBounds(100,100,512,720);
+        //frame.pack();
+        frame.setVisible(true);
+    }
+    public static void main(String[] args) {
+        new App().go();
+    }
 }
 ```
