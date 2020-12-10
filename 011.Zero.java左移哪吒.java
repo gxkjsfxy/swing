@@ -24,6 +24,9 @@ public class App {
         label_foreground.setBounds(0,0,384,512);
         myPanel.add(label_foreground);
 
+        //移动矩阵
+        new Zero().goLeft(map);
+
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[0].length; column++) {
                 label_list.add(new JLabel());
