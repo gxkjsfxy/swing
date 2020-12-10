@@ -9,9 +9,9 @@ public class App {
     JLabel label_txt=new JLabel();
     JLabel label_foreground=new JLabel();
     int array2d[][]={
-            {1,3,2},
-            {4,7,6},
-            {9,8,5},
+            {1,2,3},
+            {4,5,6},
+            {7,8,9},
             {10,11,0}
     };
     int cell=128;
@@ -23,23 +23,10 @@ public class App {
             @Override
             public void keyPressed(KeyEvent e) {
                 super.keyPressed(e);
-                if(e.getKeyCode()==e.VK_UP){
+                if(e.getKeyCode()==e.A){
                     new Zero().goDown(array2d);
                     showMyGame();
-                    new ShowArray2d(array2d);
-                }else if(e.getKeyCode()==e.VK_DOWN){
-                    new Zero().goUp(array2d);
-                    showMyGame();
-                    new ShowArray2d(array2d);
-                }else if(e.getKeyCode()==e.VK_LEFT){
-                    new Zero().goRight(array2d);
-                    showMyGame();
-                    new ShowArray2d(array2d);
-                }else if(e.getKeyCode()==e.VK_RIGHT){
-                    new Zero().goLeft(array2d);
-                    showMyGame();
-                    new ShowArray2d(array2d);
-                }else {}
+                }
             }
         });
 
